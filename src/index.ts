@@ -1,11 +1,15 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+import bodyParser from 'body-parser';
+import cookieSession from 'cookie-session';
+
+import LoginRoutes from './routes/loginRoutes';
 
 const app = express();
 const port = process.env.PORT || 3000;
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieSession({ keys: ['fdafwfdf'] }));
 
-app.get('/', (req: Request, res: Response): void => {
-    res.send('Hello there!');
-});
+app.use(LoginRoutes);
 
 app.listen(port, () => {
     console.log(`[Server] Listening on Port ${port}`);
