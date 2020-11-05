@@ -15,11 +15,11 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: true }),
         new CopyPlugin({
             patterns: [
                 { from: './src/views', to: './views' },
-                { from: './src/css', to: './css' },
+                { from: './src/css', to: './public' },
             ],
         }),
     ],

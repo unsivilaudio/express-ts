@@ -1,0 +1,12 @@
+.footer {
+    width: 100%;
+    color: $color-gray-dark-3;
+    background: $color-gray-dark-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .copyright {
+        padding: 2rem 4.5rem;
+    }
+}
