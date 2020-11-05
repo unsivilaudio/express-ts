@@ -1,19 +1,59 @@
 .btn {
+    font-size: inherit;
     border: none;
     border-radius: 0.5rem;
     padding: 0.3rem 1.4rem;
-    background: $color-tertiary-light;
-    box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.3);
+
+    box-shadow: $btn-shadow-primary;
     transition: all 0.3s ease;
 
     &:hover {
-        background: #3a6edd;
-        box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.15);
+        box-shadow: $btn-shadow-active;
         transform: translateY(-2px);
     }
 
     &:active {
         box-shadow: none;
         transform: translateY(-1px);
+    }
+
+    &.btn__primary {
+        background: linear-gradient(
+            to right bottom,
+            $color-primary,
+            $color-primary-dark
+        );
+        background-size: 400%;
+        background-position: top 0 left 0;
+        &:hover {
+            background-position: bottom 0 right 0;
+        }
+    }
+
+    &.btn__secondary {
+        background: linear-gradient(
+            to right bottom,
+            $color-secondary-light,
+            $color-secondary-dark
+        );
+        background-size: 400%;
+        background-position: top 0 left 0;
+        &:hover {
+            background-position: bottom 0 right 0;
+        }
+    }
+
+    &.btn__tertiary {
+        color: $color-white;
+        background: linear-gradient(
+            to right bottom,
+            $color-tertiary-light,
+            $color-tertiary-dark
+        );
+        background-size: 400%;
+        background-position: top 0 left 0;
+        &:hover {
+            background-position: bottom 0 right 0;
+        }
     }
 }

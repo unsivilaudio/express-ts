@@ -1,0 +1,11 @@
+.auth {
+    width: 60%;
+    margin: 0 auto;
+    color: $color-gray-dark-3;
+    background: $color-gray-light;
+    border-radius: 2rem;
+    box-shadow: $shadow-dark;
+
+    display: flex;
+    flex-direction: column;
+}

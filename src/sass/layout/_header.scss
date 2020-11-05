@@ -1,7 +1,6 @@
 .header {
     color: $color-white;
     background: $color-primary-dark;
-    font-size: 2.5rem;
     width: 100%;
 
     .nav {
@@ -10,8 +9,9 @@
         justify-content: space-between;
 
         .brand {
+            font-size: 2.5rem;
             text-decoration: none;
-            padding: 0.8rem 1.5rem;
+            padding: 1.2rem 1.5rem;
 
             &:active,
             &:visited {
@@ -25,7 +25,6 @@
 
             .nav__item {
                 text-decoration: none;
-                text-transform: uppercase;
                 font-size: 2rem;
 
                 &:not(:last-child) {
@@ -36,6 +35,10 @@
                 &:visited {
                     color: inherit;
                 }
+            }
+
+            .user__info {
+                margin: 0 1.5rem;
             }
         }
     }

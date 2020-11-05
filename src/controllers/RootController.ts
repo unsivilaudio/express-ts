@@ -15,16 +15,9 @@ function requireAuth(req: Request, res: Response, next: NextFunction): void {
 class RootController {
     @get('/')
     getRoot(req: Request, res: Response) {
-        if (req.session && req.session.loggedIn) {
-            res.send(`
-                <div>
-                    <div>You are logged in</div>
-                    <a href="/auth/logout">Logout</a>
-                </div>
-            `);
-        } else {
-            res.render('index', { title: 'The Landing Page' });
-        }
+        let user;
+        if (req.user) user = req.user;
+        res.render('index', { title: 'A Simple Ts Controller Demo', user });
     }
 
     @get('/protected')

@@ -1,0 +1,18 @@
+extends base
+
+block content
+    .form.auth
+        header.form__header Sign Up To Users.Ts
+        form.form__control(action="/auth/signup" method="post")
+            .form__group
+                label.form__label(for="email") Email
+                input.form__input(type="email" id="email" name="username")
+            .form__group
+                label.form__label(for="password") Password
+                input.form__input(type="password" id="password" name="password")
+            .form__group
+                label.form__label(for="password-confirmation") Confirm Password
+                input.form__input(type="password" id="password-confirmation" name="passwordConfirm")
+            .form__actions
+                button.btn.btn__tertiary.form__button(type="submit") Sign Up
+                a.form__switch(href="/auth/login") Already A Member? Switch to log in.

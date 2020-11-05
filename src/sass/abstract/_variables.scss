@@ -1,22 +1,30 @@
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
+// COLORS
+$color-primary: #0190de;
+$color-primary-light: #83b8ef;
+$color-primary-dark: #0058a0;
 
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
+$color-secondary-light: #b5a5ef;
+$color-secondary-dark: #6557bf;
 
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa;
+$color-tertiary-light: #ff5e89;
+$color-tertiary-dark: #d02459;
 
-$color-gray-light-1: #f7f7f7;
-$color-gray-light-2: #eee;
+$color-gray-light: #dddee2;
+$color-gray-light-2: #cecfd2;
+$color-gray-light-3: #bebfc2;
 
-$color-gray-dark: #777;
-$color-gray-dark-2: #999;
-$color-gray-dark-3: #333;
+$color-gray-dark: #9fa8b6;
+$color-gray-dark-2: #808d9e;
+$color-gray-dark-3: #4e5d6f;
 
-$color-white: #fff;
-$color-black: #000;
+$color-white: #ebefe8;
+$color-black: #0f1117;
+
+// SHADOWS
+$shadow-light: 2px 2px 3px rgba(0, 0, 0, 0.1);
+$shadow-dark: 2px 2px 3px rgba(0, 0, 0, 0.3);
+$btn-shadow-primary: 0 2px 3px 1px rgba(0, 0, 0, 0.3);
+$btn-shadow-active: 0 2px 7px 2px rgba(0, 0, 0, 0.15);
 
 // FONT
 $default-font-size: 1.6rem;

@@ -1,0 +1,21 @@
+.hero {
+    color: $color-white;
+    background: linear-gradient(
+        to bottom right,
+        $color-tertiary-light,
+        $color-tertiary-dark
+    );
+    line-height: 1.6;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    padding: 2rem 3.5rem;
+    border-radius: 2rem;
+    box-shadow: $shadow-dark;
+
+    .hero__header {
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        font-weight: 300;
+    }
+}

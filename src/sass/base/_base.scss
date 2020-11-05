@@ -21,4 +21,17 @@ body {
     font-size: 1.6rem;
     font-family: 'Roboto', san-serif;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main.main {
+    flex: 1;
+    padding-top: 2.5rem;
+    background: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }

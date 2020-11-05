@@ -2,5 +2,10 @@ header.header
     nav.nav
         a.brand(href='/') Users.Ts
         div.nav__list
-            a.btn.nav__item(href='/auth/login') Login
-            a.btn.nav__item(href='/auth/signup') Sign Up
+            if user
+                p.user__info #{user.username}
+                a.btn.btn__primary.nav__item(href='/auth/logout') Logout
+            else
+                a.btn.btn__primary.nav__item(href='/auth/login') Login
+                a.btn.btn__primary.nav__item(href='/auth/signup') Sign Up
+                

@@ -1,0 +1,17 @@
+.message {
+    width: 60%;
+    margin: 2.5rem;
+    padding: 2rem 4.5rem;
+    border-radius: 1rem;
+    text-align: center;
+
+    &.message__success {
+        color: $color-black;
+        background: #87da80;
+    }
+
+    &.message__error {
+        color: $color-white;
+        background: #e67878;
+    }
+}
