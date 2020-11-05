@@ -23,12 +23,7 @@ class RootController {
                 </div>
             `);
         } else {
-            res.send(`
-                <div>
-                    <div>You are not logged in</div>
-                    <a href="/auth/login">Login</a>
-                </div>
-            `);
+            res.render('index', { title: 'The Landing Page' });
         }
     }
 
