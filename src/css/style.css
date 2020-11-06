@@ -41,8 +41,8 @@ $breakpoint argument choices
     transform: translateX(0); } }
 
 .message {
-  width: 60%;
-  margin: 2.5rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
   padding: 2rem 4.5rem;
   border-radius: 1rem;
   text-align: center; }
@@ -141,6 +141,43 @@ input {
         border-bottom: 1px solid #ff5e89;
         color: #ff5e89; }
 
+.header {
+  color: #ebefe8;
+  background: #0058a0;
+  width: 100%; }
+  .header .nav {
+    padding: 0 3.5rem;
+    display: flex;
+    justify-content: space-between; }
+    .header .nav .brand {
+      font-size: 2.5rem;
+      text-decoration: none;
+      padding: 1.2rem 1.5rem; }
+      .header .nav .brand:active, .header .nav .brand:visited {
+        color: inherit; }
+    .header .nav .nav__list {
+      display: flex;
+      align-items: center; }
+      .header .nav .nav__list .nav__item {
+        text-decoration: none;
+        font-size: 2rem; }
+        .header .nav .nav__list .nav__item:not(:last-child) {
+          margin: 0.8rem; }
+        .header .nav .nav__list .nav__item:active, .header .nav .nav__list .nav__item:visited {
+          color: inherit; }
+      .header .nav .nav__list .user__info {
+        margin: 0 1.5rem; }
+
+.footer {
+  width: 100%;
+  color: #4e5d6f;
+  background: #0f1117;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .footer .copyright {
+    padding: 2rem 4.5rem; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -181,49 +218,11 @@ input {
   .row .col-3-of-4 {
     width: calc( 3 * ((100% - 3 * 6rem) / 4) + 6rem * 2); }
 
-.header {
-  color: #ebefe8;
-  background: #0058a0;
-  width: 100%; }
-  .header .nav {
-    padding: 0 3.5rem;
-    display: flex;
-    justify-content: space-between; }
-    .header .nav .brand {
-      font-size: 2.5rem;
-      text-decoration: none;
-      padding: 1.2rem 1.5rem; }
-      .header .nav .brand:active, .header .nav .brand:visited {
-        color: inherit; }
-    .header .nav .nav__list {
-      display: flex;
-      align-items: center; }
-      .header .nav .nav__list .nav__item {
-        text-decoration: none;
-        font-size: 2rem; }
-        .header .nav .nav__list .nav__item:not(:last-child) {
-          margin: 0.8rem; }
-        .header .nav .nav__list .nav__item:active, .header .nav .nav__list .nav__item:visited {
-          color: inherit; }
-      .header .nav .nav__list .user__info {
-        margin: 0 1.5rem; }
-
-.footer {
-  width: 100%;
-  color: #4e5d6f;
-  background: #0f1117;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .footer .copyright {
-    padding: 2rem 4.5rem; }
-
 .hero {
   color: #ebefe8;
   background: linear-gradient(to bottom right, #ff5e89, #d02459);
   line-height: 1.6;
-  width: 70%;
-  margin: 0 auto;
+  width: 100%;
   margin-bottom: 2.5rem;
   padding: 2rem 3.5rem;
   border-radius: 2rem;
@@ -234,14 +233,29 @@ input {
     font-weight: 300; }
 
 .auth {
-  width: 60%;
-  margin: 0 auto;
+  width: 100%;
   color: #4e5d6f;
   background: #dddee2;
   border-radius: 2rem;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column; }
+
+.secret {
+  width: 100%; }
+  .secret .secret__hero {
+    background: linear-gradient(to left bottom, #6557bf, #b5a5ef);
+    width: 100%;
+    padding: 2rem; }
+    .secret .secret__hero .secret__header {
+      font-size: 3.5rem;
+      font-weight: 300;
+      letter-spacing: 0.7rem; }
+    .secret .secret__hero .secret__subheader {
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem; }
 
 * {
   margin: 0;
@@ -267,9 +281,12 @@ body {
 
 main.main {
   flex: 1;
-  padding-top: 2.5rem;
   background: #ebefe8;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center; }
+  main.main .container {
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 2.5rem; }

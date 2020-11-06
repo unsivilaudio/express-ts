@@ -2,8 +2,9 @@ header.header
     nav.nav
         a.brand(href='/') Users.Ts
         div.nav__list
-            if user
-                p.user__info #{user.username}
+            if currentUser
+                p.user__info #{currentUser.username}
+                a.btn.btn__primary.nav__item(href='/protected') Secret
                 a.btn.btn__primary.nav__item(href='/auth/logout') Logout
             else
                 a.btn.btn__primary.nav__item(href='/auth/login') Login

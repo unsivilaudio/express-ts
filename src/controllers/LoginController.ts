@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import passport from 'passport';
+
 import User from '../models/user';
 import { get, controller, bodyValidator, post, use } from './decorators';
 import { passportAuth } from './decorators/auth';
@@ -17,7 +18,6 @@ export default class LoginController {
     postLogin(req: Request, res: Response) {
         const { username } = req.body;
 
-        console.log('new user');
         res.render('index', {
             title: 'A Simple Ts Controller Demo',
             success: {
@@ -78,7 +78,7 @@ export default class LoginController {
 
     @get('/logout')
     getLogout(req: Request, res: Response) {
-        req.session = { loggedIn: false };
+        req.logout();
         res.redirect('/');
     }
 }

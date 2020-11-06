@@ -16,8 +16,8 @@ export function passportAuth(
         }
         req.logIn(user, function (err) {
             if (err) return next(err);
-            console.log('made it to last next fn');
-            return next();
         });
+        res.locals.currentUser = user;
+        next();
     })(req, res, next);
 }
